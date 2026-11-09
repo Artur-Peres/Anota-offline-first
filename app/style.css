@@ -1,21 +1,15 @@
 body {
-  font-family: sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #e8f0fe
+  ;
+  color: #222;
   max-width: 600px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
-textarea {
-  width: 100%;
-  box-sizing: border-box;
-  height: 80px;
-}
-
-li {
-  margin: .5rem 0;
-  display: flex;
-  gap: .5rem;
-  justify-content: space-between;
+h1 {
+  margin-bottom: .5rem;
 }
 
 #status {
@@ -23,25 +17,85 @@ li {
   color: #555;
 }
 
-#titulo {
+input[type="text"],
+input[type="search"],
+textarea {
   width: 100%;
   box-sizing: border-box;
-  padding: .4rem;
-  margin-bottom: .5rem;
+  padding: .6rem;
   font-size: 1rem;
+  border: 1px solid #ccd0dc;
+  border-radius: 8px;
+  background: #fff;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #5b6ee1;
+  box-shadow: 0 0 0 3px rgba(91, 110, 225, .2);
+}
+
+#titulo {
+  margin-bottom: .5rem;
+}
+
+textarea {
+  height: 90px;
+  font-family: inherit;
+}
+
+button {
+  padding: .4rem .9rem;
+  font-size: .9rem;
+  border: 1px solid #c4c8d4;
+  border-radius: 6px;
+  background: #eceef4;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #dfe2ec;
+}
+
+#salvar {
+  margin-top: .5rem;
+  background: #5b6ee1;
+  border-color: #5b6ee1;
+  color: #fff;
+  font-weight: bold;
+}
+
+#salvar:hover {
+  background: #4a5cc9;
+}
+
+#busca {
+  margin-top: 1rem;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: .6rem 0;
+  padding: .8rem .9rem;
+  display: flex;
+  gap: .5rem;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #e0e3ec;
+  border-left: 4px solid #5b6ee1;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(30, 40, 90, .08);
 }
 
 .nota-titulo {
   font-weight: bold;
+  font-size: 1.05rem;
   display: block;
-}
-
-#busca {
-  width: 100%;
-  box-sizing: border-box;
-  padding: .4rem;
-  margin-top: 1rem;
-  font-size: 1rem;
 }
 
 .nota-texto {
@@ -50,6 +104,7 @@ li {
 
 .nota-data {
   display: block;
+  margin-top: .3rem;
   font-size: .8rem;
   color: #777;
 }
@@ -58,4 +113,30 @@ li {
   display: flex;
   gap: .3rem;
   align-items: flex-start;
+}
+
+.acoes button {
+  padding: .3rem .7rem;
+  font-size: .85rem;
+}
+
+
+.acoes button:first-child {
+  background: #e4e9ff;
+  border-color: #b9c4f5;
+  color: #2e3fa8;
+}
+
+.acoes button:first-child:hover {
+  background: #d3dbff;
+}
+
+.acoes button:last-child {
+  background: #fde8ea;
+  border-color: #f0b8be;
+  color: #b3263a;
+}
+
+.acoes button:last-child:hover {
+  background: #fbd3d8;
 }
