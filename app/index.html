@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anota offline-first</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Anota</h1>
+  <p id="status">Iniciando...</p>
+
+  <input id="titulo" type="text" placeholder="Título da nota">
+  <textarea id="texto" placeholder="Escreva uma nota..."></textarea>
+  <button id="salvar">Salvar nota</button>
+  <button id="cancelar" hidden>Cancelar edição</button>
+
+  <input id="busca" type="search" placeholder="Buscar por título ou texto">
+  <ul id="lista"></ul>
+
+  <script src="https://cdn.jsdelivr.net/npm/pouchdb@8.0.1/dist/pouchdb.min.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
